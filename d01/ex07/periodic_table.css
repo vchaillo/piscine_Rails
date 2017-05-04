@@ -31,7 +31,7 @@ ul
 .M
 {
 	font-size: 0.7vw;
-	text-align: right;
+	text-align: center;
 	margin-right: 3px;
 	margin-top: 3px;
 }
@@ -50,12 +50,6 @@ ul
 {
 	font-size: 0.8vw;
 	text-align: center;
-	margin-top: 3px;
-	margin-left: 3px;
-}
-.e
-{
-	font-size: 0.6vw;
 	margin-top: 3px;
 	margin-left: 3px;
 }
