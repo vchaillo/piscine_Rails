@@ -62,23 +62,6 @@ h4
 	margin: 5px auto auto;
 	font-weight: normal;
 }
-h3
-{
-	text-align: center;
-	margin: 2% auto;
-}
-p
-{
-	text-align: center;
-	width: 60%;
-	margin: 2% auto;
-}
-img
-{
-	width: 20%;
-	margin: 2% auto;
-	display: block;
-}
 .l_orange {
 	background-color: #F7AE4C;
 }

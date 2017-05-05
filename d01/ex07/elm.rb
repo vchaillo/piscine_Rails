@@ -66,23 +66,6 @@ def css
   file << "	margin: 5px auto auto;\n"
   file << "	font-weight: normal;\n"
   file << "}\n"
-  file << "h3\n"
-  file << "{\n"
-  file << "	text-align: center;\n"
-  file << "	margin: 2% auto;\n"
-  file << "}\n"
-  file << "p\n"
-  file << "{\n"
-  file << "	text-align: center;\n"
-  file << "	width: 60%;\n"
-  file << "	margin: 2% auto;\n"
-  file << "}\n"
-  file << "img\n"
-  file << "{\n"
-  file << "	width: 20%;\n"
-  file << "	margin: 2% auto;\n"
-  file << "	display: block;\n"
-  file << "}\n"
   file << ".l_orange {\n"
   file << "	background-color: #F7AE4C;\n"
   file << "}\n"
@@ -115,8 +98,7 @@ def css
   file << "	z-index: -42;\n"
   file << "	width: 100%;\n"
   file << "	height: 100%;\n"
-  file << '	background: url(\'https://www.walldevil.com/wallpapers/a66/'
-  file << "perforated-fabric-texture.jpg');\n"
+  file << "	background: url('https://www.walldevil.com/wallpapers/a66/perforated-fabric-texture.jpg');\n"
   file << "	background-size: cover;\n"
   file << "	background-repeat: no-repeat;\n"
   file << "	background-position: center;\n"
@@ -133,8 +115,7 @@ def head(file)
   file << "<title>Periodic Table</title>\n"
   file << '<meta http-equiv=\"Content-Type\" '
   file << "content=\"text/html; charset=UTF-8\" />\n"
-  file << '<link rel=\"stylesheet\" type=\"text/css\" '
-  file << "href=\"periodic_table.css\">\n"
+  file << "<link rel=\"stylesheet\" type=\"text/css\" href=\"periodic_table.css\">\n"
   css
   file << "</head>\n"
   file << "<body>\n"
@@ -161,8 +142,10 @@ def get_color(elem)
   return 'blue' if [4, 12, 20, 38, 56, 88].include?(elem[:number].to_i)
   return 'yellow' if [5, 14, 32, 33, 51, 52].include?(elem[:number].to_i)
   return 'orange' if [9, 17, 35, 53, 85, 117].include?(elem[:number].to_i)
-  return 'green' if [13, 31, 49, 50, 81, 82, 83, 84, 113, 114, 115, 116].include?(elem[:number].to_i)
-  return 'l_blue' if (Array(21..30) + Array(39..48) + Array(72..80) + Array(104..112)).include?(elem[:number].to_i)
+  green = [13, 31, 49, 50, 81, 82, 83, 84, 113, 114, 115, 116]
+  return 'green' if green.include?(elem[:number].to_i)
+  l_blue = (Array(21..30) + Array(39..48) + Array(72..80) + Array(104..112))
+  return 'l_blue' if l_blue.include?(elem[:number].to_i)
 end
 
 def create_case(file, elem)

@@ -7,9 +7,7 @@ def h2o
           ['Carlo', 19], ['Carlos', 26], ['Carter', 54], ['Casey', 2]]
 
   hash = Hash[data.map { |key, value| [key, value] }]
-  hash.each do |key, value|
-    puts "#{key} : #{value}"
-  end
+  hash.each { |key, value| puts "#{key} : #{value}" }
 end
 
 h2o if $PROGRAM_NAME == __FILE__
