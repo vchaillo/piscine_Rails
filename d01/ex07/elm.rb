@@ -113,8 +113,7 @@ def head(file)
   file << "<html>\n"
   file << "<head>\n"
   file << "<title>Periodic Table</title>\n"
-  file << '<meta http-equiv=\"Content-Type\" '
-  file << "content=\"text/html; charset=UTF-8\" />\n"
+  file << "<meta charset=\"utf-8\">\n"
   file << "<link rel=\"stylesheet\" type=\"text/css\" href=\"periodic_table.css\">\n"
   css
   file << "</head>\n"
