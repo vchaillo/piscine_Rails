@@ -127,11 +127,12 @@ def finish(file)
 end
 
 def create_elem(line)
-  { name: line.split[0], position: line.split(',')[0].split(':')[1],
-    number: line.split(',')[1].split(':')[1],
-    small: line.split(',')[2].split(':')[1].strip,
-    molar: line.split(',')[3].split(':')[1],
-    electrons: line.split(',')[4].split(':')[1] }
+  attributes = line.split(',')
+  { name: line.split[0], position: attributes[0].split(':')[1],
+    number: attributes[1].split(':')[1],
+    small: attributes[2].split(':')[1].strip,
+    molar: attributes[3].split(':')[1],
+    electrons: attributes[4].split(':')[1] }
 end
 
 def get_color(elem)
