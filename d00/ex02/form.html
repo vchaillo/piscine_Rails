@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <script src="popup.js"></script>
+        <style>
+        form {
+            text-align: center;
+        }
+        form input {
+            /*display: block;*/
+            margin: 10px auto;
+            padding: 7px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            min-width: 200px;
+        }
+        input[type="submit"] {
+            background-color: #3497ff;
+        }
+        </style>
+    </head>
+    <body>
+
+        <form action="form.html" method="post">
+            <input type="text" name="Firstname" placeholder="Firstname" id="firstname"><br>
+            <input type="text" name="Name" placeholder="Name" id="name"><br>
+            <input type="number" name="Age" placeholder="Age" id="age"><br>
+            <input type="tel" name="Phone" placeholder="Phone" id="phone"><br>
+            <input type="email" name="Email" placeholder="Email" id="email"><br>
+             Student at 42 ? <input type="checkbox" name="Student_at_42" id="student"><br>
+            <input type="radio" name="Gender" value="Male" id="gender_male" checked> Male
+            <input type="radio" name="Gender" value="Female" id="gender_female"> Female
+            <input type="radio" name="Gender" value="Other" id="gender_other"> Other<br>
+            <input type="submit" value="Send" onclick="displayFormContents();">
+        </form>
+
+    </body>
+</html>
