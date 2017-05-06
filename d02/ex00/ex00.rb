@@ -5,12 +5,12 @@ class Html
   attr_reader :page_name
 
   def initialize(page_name)
-    @page_name = page_name + '.html'
+    @page_name = page_name
     head
   end
 
   def head
-    open(@page_name, 'w') do |file|
+    open(@page_name + '.html', 'w') do |file|
       file << "<!DOCTYPE html>\n"
       file << "<html>\n"
       file << "<head>\n"
@@ -21,13 +21,13 @@ class Html
   end
 
   def dump(str)
-    open(@page_name, 'a') do |file|
+    open(@page_name + '.html', 'a') do |file|
       file << "  <p>#{str}</p>\n"
     end
   end
 
   def finish
-    open(@page_name, 'a') do |file|
+    open(@page_name + '.html', 'a') do |file|
       file << "</body>\n"
     end
   end
